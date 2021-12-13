@@ -4,11 +4,11 @@ Preview tar.gz in the browser
 
 ## HTML script
 
-### Import
+### CDN
 
-`<script src="./index.js"></script>`
+`<script src="https://cdn.jsdelivr.net/npm/@myml/js-targz@0.0.4/index.js"></script>`
 
-### Use
+### Demo
 
 See [./demo.html](./demo.html)
 
@@ -27,6 +27,15 @@ See [./demo.html](./demo.html)
 ```ts
 targz(files[0], (header) => {
   console.log(header);
-  return true;
+});
+```
+
+```ts
+targz(files[0], (header) => {
+  // stop loop
+  if (header.Name == "found_file") {
+    return true;
+  }
+  console.log(header);
 });
 ```

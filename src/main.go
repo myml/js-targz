@@ -51,9 +51,9 @@ func newTarGzPromise(r io.Reader, callback *gopherjs.Object) promiseExecutor {
 				}
 				err := callback.Invoke(h)
 				if err.Bool() {
-					return nil
+					return errBreak
 				}
-				return errBreak
+				return nil
 			}
 			err := targz.TarGz(r, call)
 			if err != nil && !errors.Is(err, errBreak) {

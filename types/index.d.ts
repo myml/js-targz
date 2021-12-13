@@ -15,4 +15,4 @@ interface TarHeader {
 
 type Callback = (header: TarHeader) => boolean;
 
-export declare function targz(a: Blob, callback: Callback): number;
+export declare function targz(a: Blob, callback: Callback): Promise<void>;
