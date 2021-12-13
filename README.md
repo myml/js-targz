@@ -6,7 +6,7 @@ Preview tar.gz in the browser
 
 ### CDN
 
-`<script src="https://cdn.jsdelivr.net/npm/@myml/js-targz@0.0.4/index.js"></script>`
+` <script src="https://cdn.jsdelivr.net/npm/@myml/js-targz@0.1.0/index.js"></script>`
 
 ### Demo
 
