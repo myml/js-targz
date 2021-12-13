@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <progress hidden></progress>
+    <br />
+    Select a tar.gz file
+    <br />
+    <input type="file" />
+    <br />
+    <ul></ul>
+  </body>
+  <script src="./index.js"></script>
+  <script>
+    const progress = document.querySelector("progress");
+    const ul = document.querySelector("ul");
+    const input = document.querySelector("input");
+    input.addEventListener("change", async () => {
+      if (!input.files || input.files.length == 0) {
+        return;
+      }
+      progress.hidden = false;
+      ul.innerHTML = "";
+      await targz(input.files[0], (header) => {
+        console.log(header);
+        const li = document.createElement("li");
+        li.textContent = JSON.stringify(header);
+        ul.append(li);
+        return true;
+      });
+      progress.hidden = true;
+      input.value = "";
+    });
+  </script>
+</html>

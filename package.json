@@ -1,0 +1,24 @@
+{
+  "name": "@myml/js-targz",
+  "version": "0.0.3",
+  "description": "Preview tar.gz in the browser",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "cd src && gopherjs build -o ../index.js"
+  },
+  "keywords": [
+    "tar",
+    "gz",
+    "browser",
+    "gopherjs"
+  ],
+  "files": [
+    "index.js",
+    "index.js.map",
+    "types/index.d.ts"
+  ],
+  "type": "commonjs",
+  "author": "myml",
+  "license": "MIT"
+}
