@@ -1,6 +1,6 @@
 {
   "name": "@myml/js-targz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Preview tar.gz in the browser",
   "main": "index.js",
   "types": "types/index.d.ts",

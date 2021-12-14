@@ -1,6 +1,6 @@
 interface TarHeader {
   Name: string;
-  Size: string;
+  Size: number;
   Linkname: string;
   Mode: number;
   Uid: number;
